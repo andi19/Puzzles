@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="jpa" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>de.hftstuttgart.puzzles.model.Artikel</class>
+		<class>de.hftstuttgart.puzzles.model.Auftrag</class>
+		<class>de.hftstuttgart.puzzles.model.Kunde</class>
+		<class>de.hftstuttgart.puzzles.model.Mitarbeiter</class>
+		<class>de.hftstuttgart.puzzles.model.Artikeleinheit</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://193.196.143.168/aj6s-gruppe4" />
+			<property name="javax.persistence.jdbc.user" value="aj6s-gruppe4" />
+			<property name="javax.persistence.jdbc.password" value="Pp8u829Xp2WpbTtH" />
+
+			<!--Hibernate properties -->
+			<property name="hibernate.show_sql" value="false" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+
+		</properties>
+	</persistence-unit>
+</persistence>

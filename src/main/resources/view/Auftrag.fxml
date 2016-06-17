@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+	fx:controller="de.hftstuttgart.puzzles.controller.AuftragController">
+	<!-- TODO Add Nodes -->
+	<children>
+		<Pane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="600.0">
+			
+			<children>
+				<Label layoutX="38.0" layoutY="43.0" text="Vorname:" />
+				<Label layoutX="38.0" layoutY="69.0" text="Nachname:" />
+				<Label layoutX="38.0" layoutY="95.0" text="Kundennummer:" />
+				<Label layoutX="38.0" layoutY="120.0" text="Auftragsnummer:" />
+				<Button fx:id="mAuftragsdetails" layoutX="360.0" layoutY="44.0"
+					mnemonicParsing="false" onAction="#auftragsdetailsHinzufuegen"
+					text="Auftragsdetails" />
+				<Button fx:id="mArtikelhinzufügen" layoutX="38.0" layoutY="323.0"
+					mnemonicParsing="false" onAction="#artikelHinzufuegen" prefHeight="25.0"
+					prefWidth="125.0" text="Artikel hinzufügen" />
+				<Button fx:id="mKundeninformationen" layoutX="217.0" layoutY="323.0"
+					mnemonicParsing="false" onAction="#kundenInformationen" prefHeight="25.0"
+					prefWidth="125.0" text="Kundeninformation" />
+				<Button fx:id="mAbbrechen" layoutX="217.0" layoutY="354.0"
+					mnemonicParsing="false" onAction="#abbrechen" prefHeight="25.0"
+					prefWidth="125.0" text="Abbrechen" />
+				<Button fx:id="mAuftragAnlegen" layoutX="429.0" layoutY="321.0"
+					mnemonicParsing="false" onAction="#auftragAnlegen" prefHeight="55.0"
+					prefWidth="125.0" text="Auftrag anlegen" />
+				<TableView fx:id="mArtikelView" layoutX="38.0" layoutY="145.0" prefHeight="143.0"
+					prefWidth="516.0">
+					<placeholder>
+						<Label text="Keine Artikel vorhanden" />
+					</placeholder>
+					<columns>
+						<TableColumn fx:id="mArtikelColumn" prefWidth="120.0" text="Artikel" />
+						<TableColumn fx:id="mBeschreibungColumn" prefWidth="140.0" text="Beschreibung" />
+						<TableColumn fx:id="mPreisColumn" maxWidth="5000.0" minWidth="10.0"
+							prefWidth="100.0" text="Preis" />
+						<TableColumn fx:id="mMengeColumn" maxWidth="5000.0" minWidth="10.0"
+							prefWidth="55.0" text="Menge" />
+					</columns>
+				</TableView>
+				<Label fx:id="mKundeVorname" layoutX="140.0" layoutY="43.0" prefWidth="200.0" text=""/>
+				<Label fx:id="mKundeNachname" layoutX="140.0" layoutY="69.0" prefWidth="200.0" text=""/>
+				<Label fx:id="mKundeKundennummer" layoutX="140.0" layoutY="95.0" prefWidth="200.0" text=""/>
+				<TextArea fx:id="mTextFeld" layoutX="360.0" layoutY="69.0"
+					managed="true" prefHeight="55.0" prefWidth="200.0" visible="false"
+					wrapText="true" />
+				<Label fx:id="mAuftragsnummer" layoutX="140.0" layoutY="120.0"
+					text="null" />
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>

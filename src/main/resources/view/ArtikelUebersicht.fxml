@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0"
+	xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+	<!-- TODO Add Nodes -->
+	<children>
+		<Pane layoutX="0.0" layoutY="0.0" prefHeight="400.0" prefWidth="500.0">
+			<children>
+				<TableView fx:id="mArtikelView" layoutX="14.0" layoutY="14.0"
+					prefHeight="372.0" prefWidth="312.0">
+					<columns>
+						<TableColumn fx:id="mArtikelnummer" prefWidth="100.0"
+							text="Artikelnummer" />
+						<TableColumn fx:id="mName" prefWidth="65.0" text="Name" />
+						<TableColumn fx:id="mBeschreibung" maxWidth="5000.0"
+							minWidth="10.0" prefWidth="95.0" text="Beschreibung" />
+						<TableColumn fx:id="mPreis" maxWidth="5000.0"
+							minWidth="10.0" prefWidth="50.0" text="Preis" />
+
+					</columns>
+				</TableView>
+				<Button fx:id="mHinzufuegenButton" layoutX="362.0" layoutY="27.0"
+					mnemonicParsing="false" prefWidth="100.0" text="Hinzufuegen"
+					onAction="#hinzufuegen" />
+				<Button fx:id="mAbbrechenButton" layoutX="362.0" layoutY="65.0"
+					mnemonicParsing="false" prefWidth="100.0" text="Abbrechen"
+					onAction="#abbrechen" />
+			</children>
+		</Pane>
+	</children>
+</AnchorPane>
